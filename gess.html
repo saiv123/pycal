@@ -1,0 +1,24 @@
+<html>
+<body>
+<script>
+LL = Math.floor(prompt("Gess your number? "));
+var reps = true;
+var doagain = 1;
+while (doagain == 1)
+{
+	var times = 0;
+	ran = Math.floor(Math.random()*17+1);
+	while (reps)
+	if (LL == ran){
+	   window.alert("Correct, it took you "+times+" times"); 
+
+	}
+	   else if (LL > ran) {window.alert("Guess lower"); times ++; reps = false;} 
+	   else if (LL < ran) {window.alert("Guess higher"); times ++; reps = false;}
+	   else if (LL != ran) {window.alert("?"); times ++; reps = false;}
+	   
+	doagain = Math.floor(prompt("Wanna do again? (1 is yez, 0 is noh)"));
+}
+</script>
+</body>
+</html>
